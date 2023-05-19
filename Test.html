@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        text-align: center;
+        margin: 20%;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box input {
+        width: 25%;
+        padding: 9px 0;
+        font-size: 1.5rem;
+      }
+      .box button {
+        padding: 15px 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Please Open Console</h1>
+    <div class="container">
+      <h1>Run Your 3 programme</h1>
+      <div class="box">
+        <input type="number" id="data" />
+        <button onclick="check()">Click</button>
+       
+      </div>
+      <h1 id="result"></h1>
+    </div>
+    <script>
+      const check = () => {
+        let value = Number(document.getElementById("data").value);
+        let res = document.getElementById("result");
+        for (let i = 1; i <= 3; i++) {
+          if (value < 0) {
+            res.innerHTML = "Enter Positive Value";
+          } else if (value == "") {
+            res.innerHTML = "Enter Value";
+          } else {
+            console.log(value = value + 2);
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
